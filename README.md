@@ -11,15 +11,7 @@ __PREVIEW:__
 ![Alt text](preview/1.Index.png?raw=true "Index")
 
 
-2.Groups :
-
-![Alt text](preview/2.Groups.png?raw=true "Groups")
-
-
-3.Homepage :
-
-![Alt text](preview/3.Homepage.png?raw=true "Homepage")
-
+> There are more in Preview Directory.
 
 
 __To RUN the project:__
