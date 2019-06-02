@@ -9,8 +9,6 @@ __PREVIEW:__
 1.Index :
 
 ![Alt text](preview/1.Index.png?raw=true "Index")
-
-
 > There are more in Preview Directory.
 
 
