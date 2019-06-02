@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+
+<div class="jumbotron">
+
+  <div id="content">
+    <img src="{{ user.userprofileinfo.profile_pic.url }}" class="ribbon" width="100px"/>
+</div>
+
+<div class="container">
+  <h1>You are now logged in!</h1>
+  <!-- <h1>{{ user.userprofileinfo.profile_pic.url }}</h1> -->
+
+  <h2><a href="{% url 'groups:all'%}">Go to Groups</a></h2>
+
+<style>
+  #content {
+    position: relative;
+}
+#content img {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+</style>
+
+
+
+</div>
+
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Social Blog</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  </head>
+
+
+  <body>
+
+        
+        <!-- Nav bar-->
+
+        <nav class="navbar navbar-dark bg-primary">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="{% url 'home' %}" style="color:white;">Social Blog</a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+              {% if user.is_authenticated %}
+              <li><a href="{% url 'posts:create' %}" style="color:white;">Post</a></li>
+              <li><a href="{% url 'groups:all' %}" style="color:white;"><span class="material-icons"></span>Groups</a></li>
+              <li><a href="{% url 'groups:create' %}" style="color:white;">Create Groups</a></li>
+              <li><a href="{% url 'accounts:logout' %}" style="color:white;"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+              {% else %}
+              <li><a href="{% url 'groups:all' %}" style="color:white;"> <span class="material-icons"></span>Groups</a></li>
+              <li><a href="{% url 'accounts:signup' %}" style="color:white;"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+              <li><a href="{% url 'accounts:login' %}" style="color:white;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            	{% endif %}
+            </ul>
+          </div>
+        </nav>
+
+        <!-- Nav bar end-->
+
+        
+        <div class="container mycontent">
+          {% block content %}
+
+          {% endblock %}
+
+        </div>
+  </body>
+</html>
