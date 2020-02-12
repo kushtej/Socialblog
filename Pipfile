@@ -9,7 +9,7 @@ verify_ssl = true
 argon2-cffi = "==19.1.0"
 bcrypt = "==3.1.6"
 cffi = "==1.12.0"
-django = "==2.1.5"
+django = "==2.2.10"
 django-bootstrap3 = "==11.0.0"
 django-braces = "==1.13.0"
 django-classy-tags = "==0.8.0"
